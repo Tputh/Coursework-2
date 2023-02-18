@@ -14,4 +14,13 @@ public class DailyTask extends Task{
     public LocalDateTime getTimeNextType(LocalDateTime dateTime) {
         return dateTime.plusDays(1);
     }
+    @Override
+    public String toString() {
+        return "Задача: " +
+                "id = " + getId() +
+                ", загаловок = " + getTitle() +
+                ", описание = " + getDescription() +
+                ", время =" + getTimeTask() +
+                ", тип = " + getType();
+    }
 }

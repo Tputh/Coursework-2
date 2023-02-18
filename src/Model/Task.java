@@ -88,12 +88,11 @@ public abstract class Task implements Replay{
 
     @Override
     public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", timeTask=" + timeTask +
-                ", type=" + type +
-                '}';
+        return "Задача: " +
+                "id = " + id +
+                ", загаловок = " + title +
+                ", описание = " + description +
+                ", время =" + timeTask +
+                ", тип = " + type;
     }
 }
