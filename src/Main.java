@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class Main {
     private static final TaskService taskService = new TaskService();
     private static final Pattern DATE_TIME_PATTERN =  Pattern.compile("\\d{2}\\.\\d{2}\\.\\d{4} \\d{2}\\:\\d{2}");
-    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH.mm");
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
     private static final Pattern DATE_PATTERN =  Pattern.compile("\\d{2}\\.\\d{2}\\.\\d{4}");
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
@@ -36,7 +36,7 @@ public class Main {
         String title = scanner.next();
         if (title.isBlank()) {
             System.out.println("Необходимо ввест название задачи");
-            scanner.close();
+
         }
         return title;
     }
@@ -46,7 +46,7 @@ public class Main {
         String description = scanner.next();
         if (description.isBlank()) {
             System.out.println("Необходимо ввест описание задачи");
-            scanner.close();
+
         }
         return description;
     }
@@ -66,7 +66,7 @@ public class Main {
                 break;
             default:
                 System.out.println("Тип задачи введен не коректно");
-                scanner.close();
+
         }
         return type;
     }
@@ -79,7 +79,7 @@ public class Main {
             return LocalDateTime.parse(dateTime, DATE_TIME_FORMATTER);
         }else {
             System.out.println("Введите дату и время задачи в формате dd.MM.yyyy HH.mm");
-            scanner.close();
+
             return null;
         }
     }
@@ -91,7 +91,7 @@ public class Main {
             return scanner.nextInt();
         } else {
             System.out.println("Введите повторяеиость задачи");
-            scanner.close();
+
         }
         return -1;
     }
@@ -146,7 +146,7 @@ public class Main {
             }
         }else {
             System.out.println("Введите дату в формате dd.MM.yyyy");
-            scanner.close();
+
         }
     }
     private static void deleteTask(Scanner scanner) {
